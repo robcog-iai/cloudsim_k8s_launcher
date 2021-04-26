@@ -38,4 +38,7 @@ JSON data:
 	'LevelName' : xxxx                 // the image name of the unreal engine image, it is usually named with level name
 }
 ```
-PS: there is no need to pass the ip of the 
+PS: there is no need to pass the ip of the knowrob_ameva
+
+5. configuration in knowrob_ameva
+In knowrob_ameva, `ag_create_clients(Num, LevelName, ClientId) ` is used to post request to the launcher to create k8s resources. After deployed the laucher, you need to configure the ip address and port of launcher in ag_conn.cpp.
