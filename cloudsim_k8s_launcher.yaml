@@ -6,7 +6,7 @@ metadata:
     app: gs-laun
 spec:
   containers:
-  - image: xiaojunll/gs-launcher
+  - image: robcog/cloudsim_k8s_launcher
     name: gs-launcher
     ports:
     - containerPort: 9090
