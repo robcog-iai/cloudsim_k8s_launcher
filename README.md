@@ -12,8 +12,8 @@ cloudsim_k8s_launcher is responsible for creating and closing k8s resources cont
 
 2. Build the image
 ```
-docker build -t xiaojunll/gs-launcher .
-docker push xiaojunll/gs-launcher
+docker build -t robcog/cloudsim_k8s_launcher .
+docker push robcog/cloudsim_k8s_launcher
 ```
 3. Deploy the image, the launcher will listen to port 30002, you can change that in cloudsim_k8s_launcher.yaml
 ```
