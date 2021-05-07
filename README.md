@@ -4,11 +4,11 @@ cloudsim_k8s_launcher is responsible for creating and closing k8s resources cont
 
 ### deploy on the CloudSim
 1. Eidt docketfile to setup the environment variable (important)
-PORT - the port the launcher listen to(no need to change)
-HOST - the ip address of the host running the k8s cluster. The host runs the cloudsim_k8s_launcher.
-MONGO_IP - ip address of the mongodb for keeping world state data, usually the same host \
-MONGO_PORT - port of mongodb
-IMAGE_REPO - when launcher create the resource, it will pull images from the docker hub. This specify where to pull the image. Default: robcog or xiaojunll 
+  * PORT - the port the launcher listen to(no need to change)
+  * HOST - the ip address of the host running the k8s cluster. The host runs the cloudsim_k8s_launcher.
+  * MONGO_IP - ip address of the mongodb for keeping world state data, usually the same host \
+  * MONGO_PORT - port of mongodb
+  * IMAGE_REPO - when launcher create the resource, it will pull images from the docker hub. This specify where to pull the image. Default: robcog or xiaojunll 
 
 2. Build the image
 ```
