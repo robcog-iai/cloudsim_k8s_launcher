@@ -20,7 +20,7 @@ ENV PORT=9090 \
     HOST=192.168.102.21 \
     MONGO_IP=192.168.102.21 \
     MONGO_PORT=17017 \
-    IMAGE_REPO=xiaojunll 
+    IMAGE_REPO=robcog 
 
 RUN chown -R client /home/client && \
     chmod o+x /home/client/client
