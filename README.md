@@ -2,7 +2,7 @@
 
 cloudsim_k8s_launcher is responsible for creating and closing k8s resources containing unreal engine pixel streaming application in the cluster
 
-## deploy on the CloudSim
+## Deploy for CloudSim
 
 1. Edit the dockerfile to setup the environment variable (important)
   * PORT - the port the launcher listen to(no need to change)
@@ -16,18 +16,18 @@ cloudsim_k8s_launcher is responsible for creating and closing k8s resources cont
 docker build -t robcog/cloudsim_k8s_launcher .
 docker push robcog/cloudsim_k8s_launcher
 ```
+
 3. Deploy the image, the launcher will listen to port 30002, you can change that in cloudsim_k8s_launcher.yaml
 ```
 kubectl apply -f cloudsim_k8s_launcher.yaml
 ```
 
 4. How to use the launcher
-Send HTTP POST request to the launcher with JSON data.
-You don't send post request directly. You can use Prolog query in knowrob_ameva
+Send HTTP POST request to the launcher with JSON data, one does not need to send post request directly, use the Prolog query in `knowrob_ameva`:
 ```
 ag_create_clients(Num, LevelName, ClientId) 
 ```
-When launcher receives the request from knowrob_ameva, it will create an unreal engine application in k8s, and pass the ip address of `knowrob`, so the unreal engine application can connect to `knowrob_ameva`
+once the launcher receives the request from `knowrob_ameva`, it will create an unreal engine application in k8s, and pass the ip address of `knowrob`, so the unreal engine application can connect to `knowrob_ameva`
 
 
 JSON data:
